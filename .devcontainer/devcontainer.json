@@ -5,6 +5,7 @@
 	],
 	"service": "workspace",
 	"workspaceFolder": "/workspace",
+	"mounts": "source=${localEnv:HOME}${localEnv:USERPROFILE}/workspace_src,target=/workspace,type=bind,consistency=cached"
 	"shutdownAction": "stopCompose",
 	"customizations": {
 		"vscode": {

@@ -4,7 +4,7 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "catkin_make",
+            "label": "Tools: catkin_make",
             "type": "shell",
             "command": "bash -i -c catkin_make",
             "group": {
@@ -24,37 +24,30 @@
             }
         },
         {
-            "label": "catkin_create_pkg",
+            "label": "Tools: catkin_create_pkg",
             "type": "shell",
             "command": "bash -i -c 'cd src && catkin_create_pkg ${input:packageName} ${input:dependingPackages}'"
         },
         {
-            "label": "xserver",
-            "type": "shell",
-            "command": "echo",
-            "args": [
-                "Please open http://localhost:3000/ using your favorite browser.\n(If you are using Docker Toolbox, open http://192.168.99.100:3000/ instead)"
-            ]
+            "label": "Terminal 1",
+            "type": "process",
+             "command": "/bin/bash"
         },
         {
-            "label": "roscore",
-            "type": "shell",
-            "command": "bash -i -c roscore",
-            "presentation": {
-                "reveal": "always",
-                "panel": "new"
-            }
+            "label": "Terminal 2",
+            "type": "process",
+             "command": "/bin/bash"
         },
         {
-            "label": "rviz",
-            "type": "shell",
-            "command": "bash -i -c 'rosrun rviz rviz'",
-            "presentation": {
-                "reveal": "always",
-                "panel": "new"
-            }
-        }
-    ],
+            "label": "Terminal 3",
+            "type": "process",
+             "command": "/bin/bash"
+        },
+        {
+            "label": "Terminal 4",
+            "type": "process",
+             "command": "/bin/bash"
+        }     ],
     "inputs": [
         {
             "id": "packageName",
